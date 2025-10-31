@@ -58,7 +58,7 @@ variable "instance_keypair" {
 
 resource "aws_instance" "demo_instance" {
   ami           = "ami-06e46074ae430fba6"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   subnet_id     = aws_subnet.demotf_subnet.id
   key_name = var.instance_keypair
   vpc_security_group_ids = [aws_security_group.demotf_security_group.id]
